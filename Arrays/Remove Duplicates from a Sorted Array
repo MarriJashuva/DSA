@@ -1,0 +1,15 @@
+import java.util.*;
+class java{
+    public static void main(String args[]){
+        int[] arr = {0,0,1,1,1,2,2,3,3,4};
+        int i=1;
+        for(int j=1;j<arr.length;j++){
+            if(arr[j-1]!=arr[j]){
+               arr[i]=arr[j];
+               i++;
+            }
+        }
+        // Print only the unique portion of the array
+        System.out.println(Arrays.toString(Arrays.copyOf(arr, i)));
+    }
+}

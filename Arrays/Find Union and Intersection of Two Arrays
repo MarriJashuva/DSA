@@ -1,0 +1,36 @@
+import java.util.*;
+class java{
+    public static void main(String args[]){
+       int[] arr={1,2,3,4};
+       int[] arr1={3,4,5,6};
+       System.out.println(union(arr,arr1));
+       System.out.println(intersection(arr,arr1));
+    }
+
+    public static Set<Integer> union(int[] arr,int[] arr1){
+       Set<Integer> unionSet = new LinkedHashSet<>();
+       for(int ele:arr){
+          unionSet.add(ele);
+       } 
+       for(int ele:arr1){
+          unionSet.add(ele);
+       }
+       return unionSet;
+    }
+
+    public static Set<Integer> intersection(int[] arr,int[] arr1){
+        Set<Integer> set1 = new LinkedHashSet<>();
+        for(int ele:arr){
+            set1.add(ele);
+        }
+        Set<Integer> intersection=new LinkedHashSet<>();
+        for(int ele:arr1){
+            if(set1.contains(ele)){
+                intersection.add(ele);
+            }
+        }
+        return intersection;
+
+    }
+    
+}

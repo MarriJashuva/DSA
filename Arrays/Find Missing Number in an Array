@@ -1,0 +1,16 @@
+import java.util.*;
+class java{
+    public static void main(String args[]){
+       int[] arr = {1,3,4};
+       int n=4;
+       int xor=0;
+       for(int i=1;i<=n;i++){
+          xor^=i;
+       }
+       for(int ele:arr){
+          xor^=ele;
+       }
+       System.out.println(xor);
+    }
+    
+}

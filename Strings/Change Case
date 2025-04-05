@@ -1,0 +1,8 @@
+str = "Hello"
+myList = []
+for i in str:
+    if "A" <= i <= "Z":
+        myList.append(chr(ord(i) + 32))
+    else:
+        myList.append(chr(ord(i) - 32))
+print("".join(myList))

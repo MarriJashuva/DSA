@@ -1,0 +1,17 @@
+def find(str1):
+    previous=str1[0]
+    count=1
+    list=[]
+    for i in str1:
+        if i==previous:
+            count=count+1
+        else:
+            list.append(previous)
+            list.append(str(count))
+            previous=i
+            count=1
+    list.append(previous)
+    list.append(str(count))
+    return "".join(list)
+    
+print(find("aabbcc"))

@@ -1,0 +1,14 @@
+def possible(str1):
+    dict={}
+    count=0
+    for i in str1:
+        if i not in dict:
+            dict[i]=1
+        else:
+            dict[i]+=1
+    for j in dict.values():
+        if j%2==1:
+            count+=1
+    return count<=1
+
+print(possible("aabbcd"))

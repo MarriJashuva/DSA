@@ -1,0 +1,21 @@
+def find(str1):
+    previous=str1[0]
+    count=0
+    myList=[]
+    for i in str1:
+        if i==previous:
+            count+=1
+        else:
+            myList.append(str(count))
+            myList.append(previous)
+            count=1
+            previous=i
+    myList.append(str(count))
+    myList.append(previous)
+    return "".join(myList)
+
+n=int(input())
+s="1"
+for i in range(1,n):
+    s=find(s)
+print(s)

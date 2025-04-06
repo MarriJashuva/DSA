@@ -1,0 +1,10 @@
+def maxmin(list):
+    max=min=list[0]
+    for i in list:
+        if max<i:
+            max=i
+        if min>i:
+            min=i
+    print(f"Min:{min}\nMax:{max}")
+
+maxmin([1,2,3,4,5])

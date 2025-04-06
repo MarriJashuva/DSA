@@ -1,0 +1,8 @@
+def count(str):
+    from collections import Counter
+    counts = Counter(str)
+    for char in counts:
+        if counts[char]==1:
+            return char
+    return None
+print(count("swiss"))

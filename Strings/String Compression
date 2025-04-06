@@ -1,6 +1,6 @@
 def find(str1):
     previous=str1[0]
-    count=1
+    count=0
     list=[]
     for i in str1:
         if i==previous:

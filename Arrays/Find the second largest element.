@@ -1,0 +1,10 @@
+import heapq
+def find(arr):
+    if not arr:
+        return None
+    max_heap = [-x for x in arr]
+    heapq.heapify(max_heap)
+    max1=-heapq.heappop(max_heap)
+    max2=-heapq.heappop(max_heap)
+    return max2
+print(find([1,2,3,4,5]))

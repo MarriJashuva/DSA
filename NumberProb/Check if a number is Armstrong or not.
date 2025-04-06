@@ -1,0 +1,10 @@
+def armstrong(n):
+    arm=0
+    while(n!=0):
+        r=n%10
+        arm=arm+r**3
+        n//=10
+    return arm
+
+print(armstrong(12))
+    

@@ -1,0 +1,16 @@
+#[1,2,3,4,5]
+
+def binarySearch(arr,value):
+    l=0
+    r=len(arr)-1
+    while(l<=r):
+        mid=(l+r)//2
+        if(arr[mid]==value):
+            return mid
+        elif(arr[mid]>value):
+            r=mid-1
+        else:
+            l=mid+1
+
+print(binarySearch([1,2,3,4,5],4))
+

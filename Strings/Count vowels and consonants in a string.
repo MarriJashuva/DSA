@@ -1,0 +1,10 @@
+def count(str1):
+    vow=0
+    cons=0
+    for i in str1:
+        if i in "aeiouAEIOU":
+            vow+=1
+        else:
+            cons+=1
+    print(f"Vowels:{vow}\nConsonants:{cons}")
+count("abcde")

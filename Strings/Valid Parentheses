@@ -1,0 +1,15 @@
+def valid(str1):
+    stack=[]
+    for i in str1:
+        if i=='(':
+            stack.append(')')
+        elif i=='[':
+            stack.append(']')
+        elif i=='{':
+            stack.append('}')
+        else:
+            if not stack or stack.pop()!=i:
+                return False
+    return not stack
+
+print(valid("(){}[["))

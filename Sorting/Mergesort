@@ -1,0 +1,36 @@
+def merge(arr,low,mid,high):
+    ls=[]
+    left=low
+    right=mid+1
+    n1=mid
+    n2=high
+    while(left<=n1 and right<=n2):
+        if(arr[left]<=arr[right]):
+            ls.append(arr[left])
+            left+=1
+        else:
+            ls.append(arr[right])
+            right+=1
+    while(left<=n1):
+        ls.append(arr[left])
+        left+=1
+    while(right<=n2):
+        ls.append(arr[right])
+        right+=1
+    for i in range(len(ls)):
+        arr[low + i] = ls[i]  
+    
+def mergesort(arr,low,high):
+    if(low>=high):
+        return
+    mid=(low+high)//2
+    mergesort(arr,low,mid)
+    mergesort(arr,mid+1,high)
+    merge(arr,low,mid,high)
+    
+list1=[1,2,2,3,3,9,1,2,3]
+
+mergesort(list1,0,len(list1)-1)
+
+print(list1)
+

@@ -1,0 +1,24 @@
+def merge(list1,list2):
+    ls=[]
+    left=0
+    right=0
+    n1=len(list1)-1
+    n2=len(list2)-1
+    while(left<=n1 and right<=n2):
+        if(list1[left]<=list2[right]):
+            ls.append(list1[left])
+            left+=1
+        else:
+            ls.append(list2[right])
+            right+=1
+    while(left<=n1):
+        ls.append(list1[left])
+        left+=1
+    while(right<=n2):
+        ls.append(list2[left])
+        right+=1
+    return ls
+list1=[1,2,2,3,3,9]
+list2=[1,5,6,7,8]
+
+print(merge(list1,list2))

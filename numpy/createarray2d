@@ -1,0 +1,14 @@
+import numpy as np
+
+r = int(input("Enter number of rows: "))
+c = int(input("Enter number of columns: "))
+
+print(f"Enter {r * c} numbers separated by space:")
+user_input = input()
+
+# Convert to 2D NumPy array
+flat_list = list(map(int, user_input.split()))
+arr_2d = np.array(flat_list).reshape(r, c)
+
+print("2D Array:")
+print(arr_2d)

@@ -1,0 +1,18 @@
+# transpose
+
+
+def transpose(arr,r,c):
+    for i in range(0,r):
+        for j in range(0,c):
+            arr[i][j],arr[j][i]=arr[j][i],arr[i][j]
+    
+    
+import numpy
+
+arr = numpy.array([[1,2,3],
+                    [4,5,6],
+                    [7,8,9]])
+
+transpose(arr,3,3)
+
+print(arr)

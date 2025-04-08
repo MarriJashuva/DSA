@@ -1,0 +1,14 @@
+# Conversions
+# decimal to binary
+a=5
+b=bin(5)[2:]
+print(b)
+# binary to decimal
+a=int(b,2)
+print(a)
+#decimal to octal
+o=oct(a)[2:]
+print(o)
+#decimal to hex
+h=hex(a)[2:]
+print(h)

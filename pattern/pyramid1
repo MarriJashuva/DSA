@@ -1,0 +1,14 @@
+def right_py(n):
+    for i in range(n,0,-1):
+        print("*"*i)
+
+right_py(5)
+
+
+*****
+****
+***
+**
+*
+
+=== Code Execution Successful ===

@@ -1,0 +1,6 @@
+np.sum(a)           # Total sum
+np.mean(a)          # Mean
+np.max(a)           # Max value
+np.min(a)           # Min value
+np.std(a)           # Standard deviation
+np.argmax(a)        # Index of max value (flattened)

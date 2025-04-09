@@ -1,0 +1,10 @@
+def sum(n):
+    res=0
+    while(n!=0):
+        r=n%10
+        res=res+r
+        n//=10
+    return res
+
+n=123
+print(sum(n))

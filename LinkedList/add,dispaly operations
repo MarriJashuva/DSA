@@ -1,0 +1,35 @@
+class Node:
+    def __init__(self,ele):
+        self.data=ele
+        self.next=None
+
+class LinkedList:
+    def __init__(self):
+        self.head=None
+    def add(self,ele):
+        new_node = Node(ele)
+        if self.head is None:
+            self.head=new_node
+            print(f"{new_node.data} is added")
+        else:
+            current=self.head
+            while current.next:
+                current=current.next
+            current.next=new_node
+            print(f"{ele} is added")
+    def display(self):
+        current=self.head
+        if self.head is None:
+            print("Linkedlist is empty")
+            return 
+        else:
+            current=self.head
+            while current:
+                print(current.data,end="-->")
+                current=current.next
+            print("None")
+        
+ls=LinkedList()
+ls.add(2)
+ls.add(3)
+ls.display()

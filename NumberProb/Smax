@@ -1,0 +1,13 @@
+def second(arr):
+    max=arr[0]
+    Smax=arr[0]
+    for i in arr:
+        if max<i:
+           Smax=max
+           max=i
+        elif Smax<i and Smax!=mx:
+            Smax=i
+    return Smax
+
+print(second([1,2,3,4]))
+    

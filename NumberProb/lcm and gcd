@@ -1,0 +1,10 @@
+def gcd(n1,n2):
+    while n1!=n2:
+        if n1>n2:
+            n1-=n2
+        else:
+            n2-=n1
+    return n1
+
+print("GCD:",gcd(6,12))
+print(f"LCM={(6*12)//gcd(6,12)}")

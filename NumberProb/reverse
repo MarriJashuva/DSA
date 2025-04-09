@@ -1,0 +1,10 @@
+def reverse(n):
+    res=0
+    while(n!=0):
+        r=n%10
+        res=r+res*10
+        n//=10
+    return res
+
+n=123
+print(reverse(n))

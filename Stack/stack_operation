@@ -1,0 +1,45 @@
+class Stack:
+    def __init__(self):
+        self.stack=[]
+        
+    def is_empty(self):
+        return len(self.stack)==0
+        
+    def push(self,ele):
+        self.stack.append(ele)
+        print(f"{ele} added to stack")
+        
+    def pop(self):
+        if self.is_empty():
+            print("Stack is empty")
+        else:
+            ele=self.stack.pop()
+            print(f"{ele} is pop")
+            
+    def peek(self):
+        print(f"{self.stack[-1]} is peek ele")
+    
+    def display(self):
+        print("Stack ele:",self.stack[-1::-1])
+    
+s=Stack()
+s.push(2)
+s.push(3)
+s.push(4)
+s.display()
+s.pop()
+s.display()
+s.peek()
+s.display()
+
+
+2 added to stack
+3 added to stack
+4 added to stack
+Stack ele: [4, 3, 2]
+4 is pop
+Stack ele: [3, 2]
+3 is peek ele
+Stack ele: [3, 2]
+
+=== Code Execution Successful ===        

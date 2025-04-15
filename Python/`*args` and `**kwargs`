@@ -1,0 +1,90 @@
+Great question, Jashuva! 🌟
+
+In Python, `*args` and `**kwargs` are **special syntax** used to pass a **variable number of arguments** to a function.
+
+---
+
+## 🔹 What is `*args`?
+
+- `*args` allows you to pass **multiple positional arguments** to a function.
+- Internally, it collects them into a **tuple**.
+
+### ✅ Example:
+```python
+def greet_all(*args):
+    for name in args:
+        print("Hello", name)
+
+greet_all("Jashuva", "Rahul", "Meena")
+```
+
+### 🟢 Output:
+```
+Hello Jashuva
+Hello Rahul
+Hello Meena
+```
+
+> Think of `*args` as: "Pass me any number of values, and I’ll treat them like a tuple."
+
+---
+
+## 🔸 What is `**kwargs`?
+
+- `**kwargs` allows you to pass **multiple keyword arguments** (i.e., key=value).
+- Internally, it collects them into a **dictionary**.
+
+### ✅ Example:
+```python
+def student_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+student_info(name="Jashuva", age=22, course="Python")
+```
+
+### 🟢 Output:
+```
+name: Jashuva
+age: 22
+course: Python
+```
+
+> Think of `**kwargs` as: "Pass me any number of key=value pairs, and I’ll treat them like a dictionary."
+
+---
+
+## 🧠 Can You Use Both Together?
+
+Yes! And usually in this order:
+
+```python
+def demo(a, b, *args, **kwargs):
+    print("a:", a)
+    print("b:", b)
+    print("args:", args)
+    print("kwargs:", kwargs)
+
+demo(1, 2, 3, 4, name="Jashuva", city="Hyderabad")
+```
+
+### 🟢 Output:
+```
+a: 1
+b: 2
+args: (3, 4)
+kwargs: {'name': 'Jashuva', 'city': 'Hyderabad'}
+```
+
+---
+
+## ✅ Summary:
+
+| Syntax     | Type of Argument     | Stored As     | Use When... |
+|------------|----------------------|---------------|-------------|
+| `*args`    | Positional arguments | Tuple         | Number of arguments is not fixed |
+| `**kwargs` | Keyword arguments    | Dictionary    | Number of named arguments is not fixed |
+
+---
+
+Let me know if you want real-world use cases, like in Django or APIs. I'm here for that too! 💻🚀

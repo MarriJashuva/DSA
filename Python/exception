@@ -1,0 +1,35 @@
+In Python, exceptions are handled using the try, except, else, and finally blocks. Exception handling allows you to gracefully manage errors that occur during program execution, preventing crashes and making your code more robust.
+try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+except ValueError:
+    print("Invalid input! Please enter a number.")
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+
+try:
+    num = int(input("Enter a number: "))
+    result = 100 / num
+except ZeroDivisionError:
+    print("Zero is not allowed.")
+else:
+    print("Result is:", result)
+finally:
+    print("Execution completed.")
+
+
+Exception | Description
+1. ZeroDivisionError | Raised when you divide a number by zero.
+2. ValueError | Raised when a function gets the right type but an inappropriate value.
+3. TypeError | Raised when an operation or function is applied to an object of inappropriate type.
+4. IndexError | Raised when you try to access an index that doesn't exist in a list or tuple.
+5. KeyError | Raised when you try to access a dictionary key that doesn’t exist.
+6. FileNotFoundError | Raised when trying to open a file that doesn't exist.
+7. AttributeError | Raised when an invalid attribute is accessed for an object.
+8. ImportError | Raised when an import statement fails to find the module or name.
+9. NameError | Raised when a variable is used before it is defined.
+10. MemoryError | Raised when an operation runs out of memory.
+
+Keyword | Role | In Your Code
+throw | Actually throws the error | throw new IOException("File not found");
+throws | Declares the possibility | public static void riskyMethod() throws IOException

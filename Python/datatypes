@@ -1,0 +1,13 @@
+Type | Description | Example
+int | Integer numbers | x = 10
+float | Decimal numbers | x = 3.14
+complex | Complex numbers | x = 2 + 3j
+str | String of characters | x = "Hello"
+list | Ordered, mutable | x = [1, 2, 3]
+tuple | Ordered, immutable | x = (1, 2, 3)
+range | Sequence of numbers | x = range(5)
+dict | Key-value pairs | x = {"name": "Jashuva"}
+set | Unordered, unique items | x = {1, 2, 3}
+frozenset | Immutable set | x = frozenset([1, 2])
+bool | True or False | x = True
+NoneType | Represents null value | x = None

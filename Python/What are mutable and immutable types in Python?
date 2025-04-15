@@ -1,0 +1,73 @@
+In Python, mutable and immutable types refer to whether or not the contents of an object can be changed after it has been created. Understanding the difference
+is crucial for working with Python's data types, especially when it comes to performance and behavior in different contexts.
+
+1. Mutable Types
+A mutable object is an object whose state (or contents) can be changed after it is created. This means you can modify, add, or remove elements from the object,
+and the changes will persist.
+
+Examples of mutable types:
+
+Lists (list)
+
+Dictionaries (dict)
+
+Sets (set)
+
+These data types allow you to modify their contents after they are created.
+
+Example of Mutable Types:
+python
+Copy
+Edit
+# List is mutable
+my_list = [1, 2, 3]
+my_list[0] = 100  # Modifying an element of the list
+print(my_list)    # Output: [100, 2, 3]
+
+# Dictionary is mutable
+my_dict = {'a': 1, 'b': 2}
+my_dict['a'] = 10  # Modifying a value in the dictionary
+print(my_dict)     # Output: {'a': 10, 'b': 2}
+
+# Set is mutable
+my_set = {1, 2, 3}
+my_set.add(4)      # Adding an element to the set
+print(my_set)      # Output: {1, 2, 3, 4}
+2. Immutable Types
+An immutable object is an object whose state (or contents) cannot be changed after it is created. If you try to modify the object, a new object is created instead.
+Immutable types cannot be changed in place.
+
+Examples of immutable types:
+
+Integers (int)
+
+Floats (float)
+
+Strings (str)
+
+Tuples (tuple)
+
+Frozen sets (frozenset)
+
+Booleans (bool)
+
+These data types do not allow modification of their content once they are created.
+
+Example of Immutable Types:
+python
+Copy
+Edit
+# Integer is immutable
+x = 5
+x = x + 1  # A new object is created for the result
+print(x)   # Output: 6 (original value of 5 is not modified)
+
+# String is immutable
+name = "John"
+name = name.upper()  # A new string is created
+print(name)          # Output: "JOHN"
+
+# Tuple is immutable
+my_tuple = (1, 2, 3)
+# my_tuple[0] = 100  # This would raise a TypeError because tuples are immutable
+print(my_tuple)      # Output: (1, 2, 3)

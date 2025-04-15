@@ -1,0 +1,7 @@
+In Python, **slicing** is a powerful way to extract a portion of a sequence, such as a **list**, **tuple**, **string**, or **other iterable types**.
+The syntax allows you to get a **subsequence** or **sublist** based on a range of indices.
+
+### Basic Slicing Syntax
+```python
+sequence[start:stop:step]
+```

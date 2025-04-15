@@ -1,0 +1,88 @@
+Awesome question, Jashuva! 🙌  
+Memory management is one of the strong suits of Python, and it happens mostly **behind the scenes** — but let me break it down clearly for you:
+
+---
+
+### 🧠 **How Memory is Managed in Python:**
+
+---
+
+### 1. **Automatic Memory Management**
+- Python takes care of memory allocation and deallocation automatically.
+- You don’t have to use `malloc()` or `free()` like in C/C++.
+
+---
+
+### 2. **Reference Counting**
+- Every object in Python has a **reference count** (i.e., how many variables point to it).
+- When an object’s reference count drops to **zero**, it is no longer used and is **marked for garbage collection**.
+
+```python
+a = "hello"
+b = a  # reference count of "hello" is now 2
+del a  # reference count becomes 1
+del b  # reference count becomes 0 → memory freed
+```
+
+---
+
+### 3. **Garbage Collection (GC)**
+- Python has a **garbage collector** that removes unused objects (especially in cases of circular references).
+- It runs **automatically** in the background, but you can manually trigger it:
+
+```python
+import gc
+gc.collect()
+```
+
+---
+
+### 4. **Private Heap Space**
+- All Python objects and data structures are stored in a **private heap**.
+- Only the Python interpreter can access this heap — it's not accessible directly by you.
+
+---
+
+### 5. **Memory Pools (via PyMalloc)**
+- Python uses an internal memory manager called **PyMalloc** for small memory allocations.
+- It reduces the overhead of system-level memory allocation.
+
+---
+
+### 6. **Object Reuse (Interning)**
+- Python reuses some immutable objects (like small integers and strings) to save memory.
+
+```python
+a = 100
+b = 100
+print(a is b)  # True → same memory location
+
+a = 1000
+b = 1000
+print(a is b)  # Might be False → different memory locations
+```
+
+---
+
+### 🧪 Example: Check Object Address
+
+```python
+x = 5
+print(id(x))  # Shows memory address of object
+```
+
+---
+
+### 🔄 Summary:
+
+| Feature                | Description                                         |
+|------------------------|-----------------------------------------------------|
+| Automatic Allocation   | Handled by Python during variable assignment        |
+| Reference Counting     | Tracks number of references to an object            |
+| Garbage Collection     | Frees memory when objects are no longer in use      |
+| Private Heap           | Stores all Python objects internally                |
+| Memory Pooling         | Efficient allocation for small objects (PyMalloc)   |
+
+---
+
+Let me know if you want a visual diagram or example to understand this deeper!

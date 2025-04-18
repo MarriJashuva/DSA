@@ -1,0 +1,16 @@
+class parent:
+    def __init__(self,x):
+        self.x=x
+    def speak(self):
+        print("parent")
+
+class child(parent):
+    def display(self):
+        print("child")
+    def printv(self):
+        print(self.x)
+
+obj = child(5)
+obj.speak()
+print(obj.x)
+obj.printv()

@@ -1,0 +1,138 @@
+Great! In Python (and most OOP languages), **inheritance** allows a class (child) to acquire properties and behaviors (methods and variables) from another class (parent). Python supports **multiple types of inheritance**:
+
+---
+
+## ✅ 1. **Single Inheritance**
+
+📌 One child class inherits from one parent class.
+
+```python
+class Animal:
+    def sound(self):
+        print("Makes sound")
+
+class Dog(Animal):
+    def bark(self):
+        print("Barks")
+
+d = Dog()
+d.sound()
+d.bark()
+```
+
+---
+
+## ✅ 2. **Multiple Inheritance**
+
+📌 One child class inherits from **more than one parent**.
+
+```python
+class Father:
+    def height(self):
+        print("Tall")
+
+class Mother:
+    def color(self):
+        print("Fair")
+
+class Child(Father, Mother):
+    pass
+
+c = Child()
+c.height()
+c.color()
+```
+
+---
+
+## ✅ 3. **Multilevel Inheritance**
+
+📌 A chain: class inherits from a class which inherits from another class.
+
+```python
+class Grandfather:
+    def house(self):
+        print("Has big house")
+
+class Father(Grandfather):
+    def car(self):
+        print("Drives car")
+
+class Son(Father):
+    def bike(self):
+        print("Rides bike")
+
+s = Son()
+s.house()
+s.car()
+s.bike()
+```
+
+---
+
+## ✅ 4. **Hierarchical Inheritance**
+
+📌 Multiple child classes inherit from a single parent class.
+
+```python
+class Animal:
+    def sound(self):
+        print("Makes sound")
+
+class Dog(Animal):
+    def bark(self):
+        print("Barks")
+
+class Cat(Animal):
+    def meow(self):
+        print("Meows")
+
+d = Dog()
+c = Cat()
+d.sound(); d.bark()
+c.sound(); c.meow()
+```
+
+---
+
+## ✅ 5. **Hybrid Inheritance**
+
+📌 Combination of two or more types (like multiple + multilevel).  
+Python uses **MRO (Method Resolution Order)** to manage this complexity.
+
+```python
+class A:
+    def show(self):
+        print("Class A")
+
+class B(A):
+    def show_b(self):
+        print("Class B")
+
+class C(A):
+    def show_c(self):
+        print("Class C")
+
+class D(B, C):  # Hybrid: Multilevel + Multiple
+    def show_d(self):
+        print("Class D")
+
+d = D()
+d.show()  # Inherited from A via MRO
+```
+
+---
+
+### 🧠 Summary Table:
+
+| Inheritance Type      | Description                                      |
+|------------------------|--------------------------------------------------|
+| Single Inheritance     | One parent → one child                          |
+| Multiple Inheritance   | Multiple parents → one child                    |
+| Multilevel Inheritance | Grandparent → parent → child                    |
+| Hierarchical Inheritance | One parent → many children                    |
+| Hybrid Inheritance     | Combination (like multilevel + multiple)        |
+
+---
+
+Let me know if you want a visual diagram or real-world examples for these!

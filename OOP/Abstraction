@@ -1,0 +1,62 @@
+### 🔥 What is Abstraction in Python?
+
+**Abstraction** is the concept of **hiding the complex implementation details** and exposing only the essential features of an object or function. 
+
+In simpler terms, **abstraction** allows us to focus on what an object does, rather than how it does it.
+
+---
+
+## 📌 Why is Abstraction Important?
+
+1. **Simplifies Complex Systems**: By hiding unnecessary details, we can focus on higher-level operations.
+2. **Improves Maintainability**: Changes in the internal implementation don't affect the external interface.
+3. **Encapsulation of Functionality**: We can expose only what is needed and hide the rest for security or complexity management.
+
+---
+
+### ✅ Achieving Abstraction in Python
+
+Python achieves abstraction using **abstract classes** and **abstract methods**. These are part of the `abc` module.
+
+---
+
+### 🚀 1. **Abstract Classes** and **Abstract Methods**
+
+An **abstract class** is a class that **cannot be instantiated** directly. It is meant to be subclassed, and it can contain **abstract methods**. An **abstract method** is a method that is declared but doesn't have an implementation in the abstract class. The child class must implement these methods.
+
+#### Steps to Create Abstraction:
+1. Use the `ABC` (Abstract Base Class) class from the `abc` module.
+2. Mark the abstract method with `@abstractmethod`.
+
+---
+
+### Example: Abstract Class and Abstract Method
+
+```python
+from abc import ABC, abstractmethod
+
+class Animal(ABC):  # Abstract class
+    @abstractmethod
+    def speak(self):  # Abstract method (no implementation here)
+        pass
+
+class Dog(Animal):  # Child class
+    def speak(self):  # Must implement the abstract method
+        print("Dog barks")
+
+class Cat(Animal):  # Another child class
+    def speak(self):  # Must implement the abstract method
+        print("Cat meows")
+
+# animal = Animal()  # ❌ Cannot instantiate abstract class
+dog = Dog()
+cat = Cat()
+
+dog.speak()  # Output: Dog barks
+cat.speak()  # Output: Cat meows
+```
+
+#### Key Points:
+- **Abstract Class**: `Animal` is abstract, so we can't create an instance of it.
+- **Abstract Method**: `speak()` is an abstract method, so it has no body in `Animal` but must be implemented in child classes like `Dog` and `Cat`.
+

@@ -1,0 +1,22 @@
+Here's a **short description** of each:
+
+---
+
+1. **NumPy** 🧮:  
+   - **Purpose**: Efficient numerical operations on **arrays** and **matrices**.  
+   - **Use**: Math-heavy tasks like **linear algebra**, **vectorization**, and **random number generation**.
+
+2. **Pandas** 📊:  
+   - **Purpose**: Data manipulation and analysis for **tabular data** (e.g., CSV, SQL).  
+   - **Use**: Handling **DataFrames**, **grouping**, **merging**, and **time series** data.
+
+3. **Matplotlib** 📈:  
+   - **Purpose**: **Data visualization** (creating plots, charts, etc.).  
+   - **Use**: Plotting **line charts**, **scatter plots**, **bar charts**, etc.
+
+---
+
+In short:  
+- **NumPy**: For **numerical** operations.  
+- **Pandas**: For **data manipulation**.  
+- **Matplotlib**: For **visualizing** data.

@@ -1,0 +1,7 @@
+Multithreading (in Python and OS)
+Definition:
+Multithreading is a technique where multiple threads run concurrently within a single process, sharing the same memory space
+
+Multiprocessing (in Python and OS)
+Definition:
+Multiprocessing is a technique where multiple independent processes run concurrently, each with its own memory space

@@ -1,0 +1,106 @@
+Great! Let's dive into **Polymorphism** in Python — one of the core concepts of Object-Oriented Programming (OOP) 🚀
+
+---
+
+## 🔥 What is Polymorphism?
+
+**Polymorphism** means **"many forms"**.
+
+It allows **different classes** to define **methods with the same name**, but with different behavior.
+
+---
+
+### ✅ 1. **Compile-time Polymorphism** (a.k.a. Method Overloading)
+
+> Python does **not support** traditional method overloading like Java or C++.
+> But we can **simulate** it using default arguments or `*args`.
+
+```python
+class Greet:
+    def hello(self, name=None):
+        if name:
+            print(f"Hello, {name}")
+        else:
+            print("Hello!")
+
+g = Greet()
+g.hello()
+g.hello("Jashuva")
+```
+
+---
+
+### ✅ 2. **Runtime Polymorphism** (Method Overriding)
+
+> Supported in Python. The child class **overrides** the method of the parent class.
+
+```python
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+
+class Cat(Animal):
+    def speak(self):
+        print("Cat meows")
+
+# Polymorphism in action
+def animal_sound(animal):
+    animal.speak()
+
+a = Animal()
+d = Dog()
+c = Cat()
+
+animal_sound(a)  # Animal speaks
+animal_sound(d)  # Dog barks
+animal_sound(c)  # Cat meows
+```
+
+🔁 The same `animal_sound()` function works with **different objects**, showing **polymorphism** in action.
+
+---
+
+### ✅ 3. **Duck Typing in Python** (Pythonic Polymorphism)
+
+> "If it walks like a duck and quacks like a duck, it must be a duck."
+
+You don’t need inheritance — just same method names:
+
+```python
+class Bird:
+    def fly(self):
+        print("Bird is flying")
+
+class Airplane:
+    def fly(self):
+        print("Airplane is flying")
+
+def start_flying(obj):
+    obj.fly()
+
+b = Bird()
+a = Airplane()
+
+start_flying(b)
+start_flying(a)
+```
+
+Even though `Bird` and `Airplane` are unrelated, they can be used polymorphically.
+
+---
+
+## 🔑 Summary:
+
+| Type                     | Supported in Python? | Description                            |
+|--------------------------|----------------------|----------------------------------------|
+| Method Overloading       | ❌ (Simulated)        | Same method name, different parameters |
+| Method Overriding        | ✅ Yes               | Child class overrides parent method    |
+| Duck Typing              | ✅ Yes               | Behavior-based polymorphism            |
+
+---
+
+Let me know if you want real-world examples like polymorphism in a billing system, vehicles, or games! 🎮

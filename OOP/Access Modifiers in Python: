@@ -1,0 +1,82 @@
+### Access Modifiers in Python: **Private**, **Protected**, and **Public**
+
+Python does not have strict access modifiers like **Java** (i.e., `private`, `protected`, `public`), but it does follow **conventions** to denote the level of access. These conventions allow you to control the visibility and accessibility of class attributes and methods. 
+
+#### 1. **Public Members (No Prefix)**
+
+By default, all attributes and methods in Python are **public**. This means they can be accessed from anywhere in the program, both inside and outside the class.
+
+##### Example:
+
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name  # Public attribute
+        self.age = age    # Public attribute
+
+    def display(self):  # Public method
+        print(f"Name: {self.name}, Age: {self.age}")
+
+p = Person("Alice", 30)
+print(p.name)  # Accessible
+p.display()  # Accessible
+```
+
+In this case, you can directly access `name` and `age` because they are **public**.
+
+---
+
+#### 2. **Protected Members (Single Underscore Prefix `_`)**
+
+**Protected members** are intended to be **accessed only within the class or by subclasses** (child classes). Although Python doesn't strictly enforce this, the **single underscore** is a convention that signals the developer to treat these members as protected and not to access them directly outside the class.
+
+##### Example:
+
+```python
+class Person:
+    def __init__(self, name, age):
+        self._name = name  # Protected attribute
+        self._age = age    # Protected attribute
+
+    def display(self):  # Public method
+        print(f"Name: {self._name}, Age: {self._age}")
+
+p = Person("Alice", 30)
+print(p._name)  # Technically accessible, but should be avoided
+p.display()
+```
+
+Even though `_name` is **protected** (not private), you can still access it from outside the class. It’s a signal for developers to treat it as internal to the class.
+
+---
+
+#### 3. **Private Members (Double Underscore Prefix `__`)**
+
+**Private members** are intended to be **accessible only within the class**. These members cannot be directly accessed outside the class. Python uses **name mangling** to ensure that private variables and methods are not easily accessible from outside the class.
+
+- Private variables or methods are prefixed with **`__`** (double underscores).
+- Python internally changes the names of private members to `_ClassName__variableName` to make them harder to access directly.
+
+##### Example:
+
+```python
+class Person:
+    def __init__(self, name, age):
+        self.__name = name  # Private attribute
+        self.__age = age    # Private attribute
+
+    def display(self):  # Public method
+        print(f"Name: {self.__name}, Age: {self.__age}")
+
+p = Person("Alice", 30)
+# print(p.__name)  # ❌ This will raise an AttributeError
+
+# Access private members through class name mangling (not recommended)
+print(p._Person__name)  # Technically works, but should be avoided
+p.display()
+```
+
+In the code above, `__name` and `__age` are **private**. If you try to access them directly outside the class (like `print(p.__name)`), Python raises an `AttributeError`. However, you can technically access them using **name mangling** (e.g., `p._Person__name`), but this is not recommended because it goes against the principles of encapsulation.
+
+---
+

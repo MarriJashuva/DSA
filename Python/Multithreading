@@ -5,3 +5,11 @@ Multithreading is a technique where multiple threads run concurrently within a s
 Multiprocessing (in Python and OS)
 Definition:
 Multiprocessing is a technique where multiple independent processes run concurrently, each with its own memory space
+
+ Synchronous Programming
+Definition:
+Synchronous code executes line by line, one task at a time. Each task must finish before the next one starts.
+
+Asynchronous Programming
+Definition:
+Asynchronous code allows multiple tasks to run seemingly at the same time using a single thread, mainly for I/O-bound operations.

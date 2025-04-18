@@ -1,0 +1,9 @@
+class Main:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def display(self):
+        print(self.x," ",self.y)
+
+obj = Main(2,3)
+obj.display()

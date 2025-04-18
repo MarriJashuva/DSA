@@ -1,0 +1,11 @@
+ls = [1,2,3]
+def backtrack(rs,ls,temp,start):
+    rs.append(temp.copy())
+    for i in range(start,len(ls)):
+        temp.append(ls[i])
+        backtrack(rs,ls,temp,i+1)
+        temp.pop()
+
+rs=[]
+backtrack(rs,ls,[],0)
+print(rs)

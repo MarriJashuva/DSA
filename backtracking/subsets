@@ -9,3 +9,7 @@ def backtrack(rs,ls,temp,start):
 rs=[]
 backtrack(rs,ls,[],0)
 print(rs)
+
+Definition:
+Backtracking is a recursive algorithmic technique for solving problems by trying all possible options and undoing ("backtracking") when a path doesn't lead to a solution.
+

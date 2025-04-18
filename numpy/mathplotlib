@@ -1,0 +1,102 @@
+Alright! Here's a **quick and clean guide to the most useful `matplotlib` functions** with simple examples — just the essentials so you can start plotting like a pro 👇
+
+---
+
+## 🎨 Importing First
+```python
+import matplotlib.pyplot as plt
+```
+
+---
+
+## 📈 1. `plot()` — Line Plot
+```python
+x = [1, 2, 3, 4]
+y = [2, 4, 6, 8]
+plt.plot(x, y)
+plt.show()
+```
+
+---
+
+## 📊 2. `bar()` — Bar Chart
+```python
+categories = ['A', 'B', 'C']
+values = [5, 7, 3]
+plt.bar(categories, values)
+plt.show()
+```
+
+---
+
+## 📉 3. `scatter()` — Scatter Plot
+```python
+x = [1, 2, 3, 4]
+y = [10, 5, 3, 8]
+plt.scatter(x, y)
+plt.show()
+```
+
+---
+
+## 📦 4. `hist()` — Histogram
+```python
+data = [1, 2, 2, 3, 3, 3, 4, 5]
+plt.hist(data, bins=5)
+plt.show()
+```
+
+---
+
+## 🧁 5. `pie()` — Pie Chart
+```python
+sizes = [25, 35, 40]
+labels = ['Apple', 'Banana', 'Cherry']
+plt.pie(sizes, labels=labels, autopct='%1.1f%%')
+plt.show()
+```
+
+---
+
+## 🧪 6. `title()`, `xlabel()`, `ylabel()` — Labels
+```python
+plt.plot([1, 2, 3], [4, 5, 6])
+plt.title('My Line Plot')
+plt.xlabel('X Axis')
+plt.ylabel('Y Axis')
+plt.show()
+```
+
+---
+
+## 🔀 7. `subplot()` — Multiple Plots in One Figure
+```python
+plt.subplot(1, 2, 1)
+plt.plot([1, 2], [3, 4])
+
+plt.subplot(1, 2, 2)
+plt.plot([1, 2], [4, 3])
+
+plt.show()
+```
+
+---
+
+## 🧼 8. `grid()`, `legend()`, `style.use()`
+```python
+plt.plot([1, 2, 3], [4, 1, 7], label='Data')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
+---
+
+## 📌 Bonus: `style.use()` — Set Plot Style
+```python
+plt.style.use('ggplot')  # Or 'seaborn', 'fivethirtyeight', etc.
+```
+
+---
+
+Want me to combine this with the NumPy cheat style? Or generate a visual cheat sheet?

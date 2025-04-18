@@ -1,0 +1,8 @@
+def factorial(n):
+    if n == 0 or n == 1:  # base case
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))  # Output: 120
+
+Recursion is a programming technique where a function calls itself to solve a smaller subproblem of the main problem.

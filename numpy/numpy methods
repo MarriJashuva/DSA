@@ -1,0 +1,89 @@
+Perfect — let’s keep it **short and practical**: Here are the **most important NumPy methods** with **quick examples** so you can actually use them right away 👇
+
+---
+
+### 🔧 1. `np.array()` — Make an array
+```python
+import numpy as np
+a = np.array([1, 2, 3])
+```
+
+---
+
+### 🔄 2. `reshape()` — Change shape of array
+```python
+a = np.array([1, 2, 3, 4, 5, 6])
+a = a.reshape(2, 3)  # 2 rows, 3 columns
+```
+
+---
+
+### ➕ 3. Element-wise operations
+```python
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+print(a + b)  # [5 7 9]
+```
+
+---
+
+### 🧮 4. `np.sum()`, `np.mean()`, `np.max()`, `np.min()`
+```python
+a = np.array([1, 2, 3, 4])
+print(np.sum(a))   # 10
+print(np.mean(a))  # 2.5
+print(np.max(a))   # 4
+print(np.min(a))   # 1
+```
+
+---
+
+### 📊 5. `np.arange()` — Range of numbers
+```python
+a = np.arange(0, 10, 2)  # [0 2 4 6 8]
+```
+
+---
+
+### 🎲 6. `np.random.randint()` — Random ints
+```python
+a = np.random.randint(1, 100, size=5)
+```
+
+---
+
+### 🧼 7. `np.where()` — Filter with condition
+```python
+a = np.array([1, 2, 3, 4])
+result = np.where(a > 2)  # returns indices: (array([2, 3]),)
+```
+
+---
+
+### 📌 8. `np.all()` / `np.any()` — Check conditions
+```python
+a = np.array([True, True, False])
+print(np.all(a))  # False
+print(np.any(a))  # True
+```
+
+---
+
+### 🎯 9. `np.unique()` — Get unique values
+```python
+a = np.array([1, 2, 2, 3])
+print(np.unique(a))  # [1 2 3]
+```
+
+---
+
+### 🧮 10. `np.dot()` — Dot product
+```python
+a = np.array([1, 2])
+b = np.array([3, 4])
+print(np.dot(a, b))  # 11 (1*3 + 2*4)
+```
+
+---
+
+Want these in a cheat sheet image? Or want to add Pandas next in the same style?
